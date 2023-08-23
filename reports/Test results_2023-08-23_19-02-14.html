@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test execution report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test execution report</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-08-23 19:02:14</p>
+                <p class='attribute'><strong>Duration: </strong>170.78 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 9, Pass: 6, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>booking_test.Booking</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_change_currency</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_change_language</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_find_getaway_deals</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_login_existing_account_with_wrong_email</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login_existing_account_with_wrong_password</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="password"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\gavri\PycharmProjects\booking_folder\booking_package\booking_test.py", line 62, in test_login_existing_account_with_wrong_password
+    self.driver.find_element(*const.REGISTER_PASSWORD_INPUT).send_keys("Uigressergiu3021984")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="password"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_place_to_go</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()="Paris"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\gavri\PycharmProjects\booking_folder\booking_package\booking_test.py", line 72, in test_place_to_go
+    chosen_place = self.driver.find_element(*const.CHOSEN_PLACE).text
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()="Paris"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_select_adults</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_select_childrens</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_select_dates</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class="b6dc9a9e69 a804864eef e6c50852bd b8c9de5937"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\gavri\PycharmProjects\booking_folder\booking_package\booking_test.py", line 76, in test_select_dates
+    click_check_date = self.driver.find_element(*const.CLICK_CHECK_IN_DATE)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\gavri\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class="b6dc9a9e69 a804864eef e6c50852bd b8c9de5937"]"}
+  (Session info: chrome=116.0.5845.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF67A0E52A2+57122]
+	(No symbol) [0x00007FF67A05EA92]
+	(No symbol) [0x00007FF679F2E3AB]
+	(No symbol) [0x00007FF679F67D3E]
+	(No symbol) [0x00007FF679F67E2C]
+	(No symbol) [0x00007FF679FA0B67]
+	(No symbol) [0x00007FF679F8701F]
+	(No symbol) [0x00007FF679F9EB82]
+	(No symbol) [0x00007FF679F86DB3]
+	(No symbol) [0x00007FF679F5D2B1]
+	(No symbol) [0x00007FF679F5E494]
+	GetHandleVerifier [0x00007FF67A38EF82+2849794]
+	GetHandleVerifier [0x00007FF67A3E1D24+3189156]
+	GetHandleVerifier [0x00007FF67A3DACAF+3160367]
+	GetHandleVerifier [0x00007FF67A176D06+653702]
+	(No symbol) [0x00007FF67A06A208]
+	(No symbol) [0x00007FF67A0662C4]
+	(No symbol) [0x00007FF67A0663F6]
+	(No symbol) [0x00007FF67A0567A3]
+	BaseThreadInitThunk [0x00007FFE484726AD+29]
+	RtlUserThreadStart [0x00007FFE4A12AA68+40]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 9, Pass: 6, Error: 3 -- Duration: 170.78 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
